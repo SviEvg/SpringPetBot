@@ -118,11 +118,12 @@ public class TelegramBot extends TelegramLongPollingBot {
         message.setText(textToSend);
 
         ReplyKeyboardMarkup keyboardMarkup = new ReplyKeyboardMarkup();
+        keyboardMarkup.setResizeKeyboard(true);
         List<KeyboardRow> keyboardRows = new ArrayList<>();
         KeyboardRow row = new KeyboardRow();
 
-        row.add("погода");
-        row.add("поднять настроение");
+        row.add("/start");
+        row.add("/help");
         keyboardRows.add(row);
 
         keyboardMarkup.setKeyboard(keyboardRows);
